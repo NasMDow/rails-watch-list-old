@@ -1,0 +1,35 @@
+<div class="container">
+<h1><%= @list.name %></h1>
+
+  <%= link_to 'Add a movie', new_list_bookmark_path(@list) %>
+  <div>
+    <% @list.movies.each do |movie| %>
+      <%= movie.title %>
+    <% end %>
+  </div>
+
+</div>
+<!-- show bookmarks for each movie -->
+<%#= link_to 'add a movie', new_list_bookmark_path(@list), class: 'btn btn-flat' %>
+
+<!--  delete lists -->
+<%#= link_to 'detete this list', lists_path(@list), method: :delete, class: 'btn btn-cancel', data: { confirm: 'Are you sure you want to delete this list?' } %>
+  <!-- delete all associated bookmarks -->
+
+<!-- edit a list -->
+  <!-- cboose from movies list -->
+     <!-- add bookmarks -->
+      <!-- choose from bookmarks -->
+
+<!-- return to movies list --> <!-- return to home page -->
+
+<!--A movie has a title (e.g. "Wonder Woman 1984"), 
+an overview ("Wonder Woman comes into conflict 
+with the Soviet Union during the Cold War in the 1980s!"), 
+a poster url and a rating (6.9).
+A list has a name (e.g. "Drama", "Comedy", "Classic", "To rewatch", … )
+A bookmark adds a movie to a list (e.g. Wonder Woman has been added to 
+the “Girl Power” watch list). 
+So each bookmark references a movie and a list, with a comment. 
+The comment field is for the user to add a little note on the 
+bookmark (e.g. Alan Turing recommended this movie).-->
