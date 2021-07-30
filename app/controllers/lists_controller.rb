@@ -6,7 +6,8 @@ class ListsController < ApplicationController
 
   def show
     @list = List.find(params[:id])
-    @bookmark = Bookmark.new
+    @bookmarks = @list.bookmarks
+    @bookmark  = Bookmark.new
   end
 
   def new
@@ -18,7 +19,7 @@ class ListsController < ApplicationController
     if @list.save
       redirect_to list_path(@list)
     else
-      render :new
+      render 'new'
     end
   end
 
